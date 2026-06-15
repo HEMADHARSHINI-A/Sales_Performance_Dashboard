@@ -1,32 +1,140 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sales Performance Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Performance Dashboard</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
+
 <body>
 
-<h1>📊 Sales Performance Dashboard</h1>
+<div class="dashboard">
 
-<h2>Project Overview</h2>
+    <div class="header">
+        <h1>🎓 Student Performance Dashboard</h1>
+    </div>
 
-<p>
-This project analyzes sales performance using Python,
-Pandas, Plotly and Streamlit.
-</p>
+    <div class="filters">
+        <select>
+            <option>All Classes</option>
+            <option>Class A</option>
+            <option>Class B</option>
+        </select>
 
-<h2>Project Features</h2>
+        <select>
+            <option>All Subjects</option>
+            <option>Math</option>
+            <option>Science</option>
+        </select>
 
-<ul>
-<li>Total Sales KPI</li>
-<li>Total Profit KPI</li>
-<li>Monthly Sales Trend</li>
-<li>Quarterly Sales Trend</li>
-<li>Yearly Sales Trend</li>
-<li>Region-wise Analysis</li>
-<li>Category-wise Analysis</li>
-<li>Top Products Analysis</li>
-</ul>
+        <select>
+            <option>All Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h2>1000</h2>
+            <p>Total Students</p>
+        </div>
+
+        <div class="card">
+            <h2>78%</h2>
+            <p>Average Score</p>
+        </div>
+
+        <div class="card">
+            <h2>85%</h2>
+            <p>Attendance</p>
+        </div>
+
+        <div class="card">
+            <h2>3.8</h2>
+            <p>Average GPA</p>
+        </div>
+
+    </div>
+
+    <div class="chart-grid">
+
+        <div class="chart-box">
+            <h3>Gender Distribution</h3>
+            <canvas id="genderChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Subject Performance</h3>
+            <canvas id="subjectChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Attendance Trend</h3>
+            <canvas id="attendanceChart"></canvas>
+        </div>
+
+        <div class="chart-box">
+            <h3>Parent Education</h3>
+            <canvas id="educationChart"></canvas>
+        </div>
+
+    </div>
+
+    <div class="table-section">
+
+        <h2>Top Students</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Math</th>
+                    <th>Reading</th>
+                    <th>Writing</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Emma</td>
+                    <td>98</td>
+                    <td>97</td>
+                    <td>99</td>
+                </tr>
+
+                <tr>
+                    <td>John</td>
+                    <td>95</td>
+                    <td>96</td>
+                    <td>94</td>
+                </tr>
+
+                <tr>
+                    <td>Sophia</td>
+                    <td>94</td>
+                    <td>95</td>
+                    <td>96</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
